@@ -13,7 +13,7 @@ def receive():
             if message == 'NICK':
                 client.send(nickname.encode('ascii'))
             else:
-                print(message)
+                print(message+'\n')
         except:
             print("An error occurred!")
             client.close()

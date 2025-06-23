@@ -37,10 +37,10 @@ def receive():
         client.send("NICK".encode('ascii'))
         
         nickname = client.recv(1024).decode('ascii')
-        clients.append(client)
         
         print(f"Nickname of the client is {nickname}!")
         broadcast(f"{nickname} joined the chat!".encode('ascii'))
+        
         nicknames.append(nickname)
         clients.append(client)
     
